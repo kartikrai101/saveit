@@ -3,6 +3,8 @@
   background-color: #1a202c;
   overflow: auto;
   text-align: center;
+
+  border: 10px solid white;
 }
 
 .container {
