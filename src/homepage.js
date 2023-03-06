@@ -1,6 +1,7 @@
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 
 // Constants
 const TWITTER_HANDLE = '_musicLib';
@@ -83,14 +84,24 @@ const Homepage = () => {
             addSong();
         }}>
             <div className='song-input-master-container'>
-            <input type="text" placeholder='Put the link to your song here'
-                value = {inputValue}
-                onChange = {onInputChange} 
-                className = 'song-input-text-container'
-            />
-            
-            <button type="submit" className='add-song-button'>Add</button>
+              <div className=''>
+                <div>
+                  <input type="text" placeholder='Put the link to your song here'
+                      value = {inputValue}
+                      onChange = {onInputChange} 
+                      className = 'song-input-text-container'
+                  />
+                </div>
+                <div>Choose Genre</div>
+              </div>
+              <div>
+                <input type="text" placeholder='Song name' className='song-input-text-container' />
+              </div>
+              <div>
+                <input type="text" placeholder="Artist(s)" className='song-input-text-container' />
+              </div>
             </div>
+            <button type="submit" className='add-song-button'>Add</button>
         </form>
 
         <div>
@@ -99,12 +110,14 @@ const Homepage = () => {
 
         <div className='song-genre-container'>
             <div className='song-genre-container-row'>
-            <div className='song-genre-item-container song-genre-item-container-1' onClick={() => setSelectedGenre(1)}>
-                {/* <img src="https://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" className='song-genre-item-image' /> */}
-                <div className='song-genre-item-text'>
-                Pop
-                </div>
-            </div>
+            <Link to="/genre/pop" className='song-genre-link'>
+              <div className='song-genre-item-container song-genre-item-container-1' onClick={() => setSelectedGenre(1)}>
+                  {/* <img src="https://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" className='song-genre-item-image' /> */}
+                  <div className='song-genre-item-text'>
+                    Pop
+                  </div>
+              </div>
+            </Link>
             <div className='song-genre-item-container song-genre-item-container-2'>
                 {/* <img src="https://images.unsplash.com/photo-1601128092070-f01270ebd5c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" className='song-genre-item-image' /> */}
                 <div className='song-genre-item-text'>
@@ -140,14 +153,7 @@ const Homepage = () => {
             </div>
             </div>    
         </div>
-        {/* <div className='song-list-container'>
-            {
-            songList.map((song_link) => {
-                return <a href={song_link} target='blank' key={song_link}><li className='song-link-item'>{song_link}</li></a>
-            })
-            }
-        </div> */}
-        </div>
+      </div>
     )
     }
 
