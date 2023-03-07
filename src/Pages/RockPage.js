@@ -12,7 +12,7 @@ const dummy_data = [
     {title: 'Pehli Baar', artist: 'Sukriti Kakkar, Siddharth Mahadevan', link: 'https://www.youtube.com/watch?v=VkJlv0m6els', date: '06/03/2023'},
 ];
 
-const PopPage = (props) => {
+const RockPage = (props) => {
 
     const [songList, setSongList] = useState([]);
 
@@ -36,7 +36,7 @@ const PopPage = (props) => {
     return (
         <div className='pop-page-master-container'>
             <div className='pop-page-cover-image-container'>
-                <img src="https://images.unsplash.com/photo-1645096529993-9bdce4006275?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className='pop-page-cover-image' />
+                <img src="https://images.unsplash.com/photo-1596827391559-de49a8f619e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" className='pop-page-cover-image' />
                 <div className='pop-page-song-input-master-container'>
                     <div className='pop-page-song-input-container'>
                         <div>
@@ -55,16 +55,16 @@ const PopPage = (props) => {
                 </div>
             </div>
             <div className='pop-page-song-list-master-container'>
-                <div className='pop-page-song-list-header-container'>
+                <div className='rock-page-song-list-header-container'>
 
-                    <div className='pop-page-song-list-header-container-text'>Pop Playlist</div>
+                    <div className='pop-page-song-list-header-container-text'>Rock Playlist</div>
                     <div className='pop-page-song-list-features-container'>
                         <div className='pop-page-song-list-feature-item-container'>Song Count: {songList.length}</div>
                         <div className='pop-page-song-list-feature-item-container'>Listening Minutes: 88</div>
                         <div className='pop-page-song-list-feature-item-container'>Last updated: {songList.length > 0 ? songList[songList.length-1].date :0} </div>
                     </div>  
                 </div>
-                <div className='pop-page-song-list-master-container-2'>
+                <div className='rock-page-song-list-master-container-2'>
                     <div>
                         {
                             songList.map((item, index) => {
@@ -103,4 +103,4 @@ const PopPage = (props) => {
     );
 };
 
-export default PopPage;
+export default RockPage;

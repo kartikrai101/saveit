@@ -1,5 +1,7 @@
 .pop-page-cover-image-container{
     height: 100vh;
+
+    position: relative;
 }
 
 .pop-page-cover-image{
@@ -12,6 +14,7 @@
 .pop-page-master-container{
     display: flex;
     flex-direction: row;
+    height: 100vh;
 }
 
 .pop-page-song-list-master-container{
@@ -37,6 +40,46 @@
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #6a040f, #370617);
+    padding: 20px 0px;
+}
+
+.hip-hop-page-song-list-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #31572c, #132a13);
+    padding: 20px 0px;
+}
+
+.rock-page-song-list-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #006494, #003554);
+    padding: 20px 0px;
+}
+
+.rap-page-song-list-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #1b263b, #0d1b2a);
+    padding: 20px 0px;
+}
+
+.soothing-page-song-list-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #5a189a, #240046);
+    padding: 20px 0px;
+}
+
+.indie-page-song-list-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #370617, #03071e);
     padding: 20px 0px;
 }
 
@@ -73,6 +116,46 @@
     overflow-y: scroll;
 }
 
+.hip-hop-page-song-list-master-container-2{
+    width: 100%;
+    background-color:#132a13;
+    color: rgb(204, 204, 204);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.rock-page-song-list-master-container-2{
+    width: 100%;
+    background-color:#003554;
+    color: rgb(204, 204, 204);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.rap-page-song-list-master-container-2{
+    width: 100%;
+    background-color:#0d1b2a;
+    color: rgb(204, 204, 204);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.soothing-page-song-list-master-container-2{
+    width: 100%;
+    background-color:#240046;
+    color: rgb(204, 204, 204);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.indie-page-song-list-master-container-2{
+    width: 100%;
+    background-color:#03071e;
+    color: rgb(204, 204, 204);
+    height: 100%;
+    overflow-y: scroll;
+}
+
 .pop-page-song-list-column-container{
     display: flex;
     justify-content: space-between;
@@ -88,6 +171,18 @@
 
 .pop-page-song-list-column-container-2:hover{
     background-color: #6a040f;
+    cursor: pointer;
+}
+
+.hip-hop-page-song-list-column-container-2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    transition: all 300ms;
+}
+
+.hip-hop-page-song-list-column-container-2:hover{
+    background-color: #31572c;
     cursor: pointer;
 }
 
@@ -127,4 +222,59 @@
 .remove-link-style{
     text-decoration: none;
     color: rgb(204, 204, 204);
+}
+
+.pop-page-song-input-master-container{
+    position: absolute;
+
+    top: 40px;
+    left: 40px;
+
+    color: white;
+
+    width: 80%;
+}
+
+.pop-page-song-input-container{
+    width:80%;
+}
+
+.pop-song-form-button{
+    background-color: rgb(47, 79, 176);
+    width: 100%;
+    padding: 0px 5px;
+    height: 40px;
+    border-radius: 5px;
+    transition: all 300ms;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.pop-song-form-button:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.pop-song-input-box{
+    width: 100%;
+
+    height: 40px;
+    margin: 10px 0px;
+    font-size: 16px;
+    padding: 0px 5px;
+    color: white;
+    background-color: grey;
+    opacity: 0.6;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+}
+
+.pop-song-input-box::placeholder{
+    color: white;
 }

@@ -36,7 +36,7 @@ const PopPage = (props) => {
     return (
         <div className='pop-page-master-container'>
             <div className='pop-page-cover-image-container'>
-                <img src="https://images.unsplash.com/photo-1645096529993-9bdce4006275?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className='pop-page-cover-image' />
+                <img src="https://images.unsplash.com/photo-1530889927395-8a6a32ebd244?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" className='pop-page-cover-image' />
                 <div className='pop-page-song-input-master-container'>
                     <div className='pop-page-song-input-container'>
                         <div>
@@ -55,7 +55,7 @@ const PopPage = (props) => {
                 </div>
             </div>
             <div className='pop-page-song-list-master-container'>
-                <div className='pop-page-song-list-header-container'>
+                <div className='indie-page-song-list-header-container'>
 
                     <div className='pop-page-song-list-header-container-text'>Pop Playlist</div>
                     <div className='pop-page-song-list-features-container'>
@@ -64,7 +64,7 @@ const PopPage = (props) => {
                         <div className='pop-page-song-list-feature-item-container'>Last updated: {songList.length > 0 ? songList[songList.length-1].date :0} </div>
                     </div>  
                 </div>
-                <div className='pop-page-song-list-master-container-2'>
+                <div className='indie-page-song-list-master-container-2'>
                     <div>
                         {
                             songList.map((item, index) => {
